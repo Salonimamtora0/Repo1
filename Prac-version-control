@@ -1,0 +1,235 @@
+Installation of Git :-
+
+Determine if Git is already installed on your computer by opening a terminal and running this command:
+
+	git --version
+
+If Git is installed, the output is:
+
+	git version X.Y.Z
+
+If your computer doesn’t recognize git as a command, you must install Git by below command :-
+
+	sudo apt-get update
+	sudo apt-get install git
+
+After you install Git, run git --version to confirm that it installed correctly.
+
+
+Now, Configure Git :-
+
+To start using Git from your computer, you must enter your credentials to identify yourself as the author of your work. The username and email address should match the ones you use in Github/Gitlab.
+
+
+In your shell, add your user name (user-name will be Github/GitLab user-name):-
+
+    	git config --global user.name "your_username"
+
+Add your email address (email address will be Github/GitLab email address):-
+
+	git config --global user.email "your_email_address@example.com"
+
+
+To check the configuration, run below command:
+
+	git config --global --list
+
+The --global option tells Git to always use this information for anything you do on your system. If you omit --global or use --local, the configuration applies only to the current repository. 
+
+
+Tasks
+
+    Import the project to local system :-
+    
+    
+Now, open  that github project link and Want to import that project locally in to system then open terminal and type below command :-
+
+Clone the project with HTTPS when you want to authenticate each time you perform an operation between your computer and Github/GitLab.
+
+
+Go to your project’s landing page and select Clone. Copy the URL for Clone with HTTPS.Open a terminal and go to the directory where you want to clone the files.
+Run the following command. Git automatically creates a folder with the repository name and downloads the files there.
+
+    git clone https://github.com/SimformSolutionsPvtLtd/trainee-practical-devops.git
+
+Then type below command to see file is cloned or not :-
+
+	ls
+	
+GitLab requests your username and password:
+
+    If you have 2FA enabled for your account, you must use a Personal Access Token with read_repository or write_repository permissions instead of your account’s password.If you don’t have 2FA enabled, use your account’s password. 
+
+To view the files, go to the new directory:
+
+	cd trainee-practical-devops
+	
+Then type below command to see file and folders under new directory:-
+
+	ls
+	
+Create a new project in your local GitHub repository and export your code in to that repository
+	
+Now, Go to your Github/Gitlab account and create repository. 
+
+	click on repositories and then click on New. Type tour repository name there as below :-
+	
+	Version-control
+	
+Now it will ask for description then type your description as below :-
+
+	Tasks and files related Version - control
+	
+Now, Make your repository private by selecting private mode.
+
+Initialize this repository with:-
+
+	select add a README file then click on create repository.
+	
+Now you created repository as Version-control :)!!
+
+export your code in to that repository :-
+
+As, you had already cloned now go to your files and open that folder in terminal. Now copy your files from downloaded folder to new repository by following command :-
+
+	cp logs package.json server.js /home/salonimamtora(username)/Version-control(New Repository)
+	
+Now go to your repository by following command :-
+
+	cd Version-control
+	
+Now check whether files are copied or not :-
+
+	ls
+	
+Now check all branches on your repository by below command :-
+
+	git branch -a
+	
+For creating new branch type below command :-
+
+	git branch my-branch (name of your branch)
+	
+Now switch to your newly created branch by below command :-
+
+	git switch my-branch
+		
+If you want to check in which branch you are type below command :-
+
+	git status 
+	
+		or
+		
+	git log --oneline
+	
+Now type below command to see changes on repository :-
+
+	git status
+	
+If you want to make all changes on github or basically it will provide the path of files or directories to commit type below command to add files :-
+
+	git add . (will add all files and folders)
+	
+		or
+		
+	git add xyz (your files and directories name)
+	
+Now commit your files it will add files on github by below command :-
+
+	git commit -m "My-Tasks" (you can add any comment for discription)
+	
+Then, push your changes on github by below command :-
+
+	git push origin my-branch (your current branch-name)
+	
+You can refresh github repository and check your new branch and uploaded files and folders if you are in default branch then you can switch to your branch by changing branch on repository of github.
+
+Now work on your local GitHub repository
+
+	In yoour Directory (Version-control) Create some files related information about version-control and git. here is an example of how t ocreate files in that folder you can use below command to create files it will create ampty files :-
+	
+	touch Basics-of-Git  Version-control (your files name) 
+	
+For insert anything in files by terminal or if your file isn't there then vi will create it and you can insert information type below command :-
+
+	vi Basics-of-Git (your file-name)
+
+Now press i to insert any content. Now press esc for exiting from shell and type :wq for saving changes and quit the shell.
+
+Now upload this files to Github by below steps :-
+
+Now type below command to see changes on repository :-
+
+	git status
+	
+If you want to make all changes on github or basically it will provide the path of files or directories to commit type below command to add files :-
+
+	git add . (will add all files and folders)
+	
+		or
+		
+	git add xyz (your files and directories name)
+	
+Now commit your files it will upload files on Github by below command :-
+
+	git commit -m "My-Tasks" (you can add any comment for discription)
+	
+Then, push your changes on github type below command :-
+
+	git push origin my-branch (your current branch-name)
+	
+You can refresh github repository and check your newly uploaded files and folders if you are in default branch then you can switch to your branch by changing branch on repository of github.	
+	
+	
+Run the server JS file in node JS and check if the application is running or not.
+
+To Run the server JS file in node JS first need to install node js for installing node js follow below steps :-
+
+	 To get this version, you can use the apt package manager. Refresh your local package index first by typing:
+
+    	sudo apt update
+
+Then install Node.js:
+
+    	sudo apt install nodejs
+
+Check that the install was successful by querying node for its version number:
+
+    	node -v
+
+
+If the package in the repositories suits your needs, this is all you need to do to get set up with Node.js. In most cases, you’ll also want to also install npm, the Node.js package manager. You can do this by installing the npm package with apt:
+
+    	sudo apt install npm
+
+This will allow you to install modules and packages to use with Node.js.
+
+At this point you have successfully installed Node.js and npm using apt and the default Ubuntu software repositories. The next section will show how to use an alternate repository to install different versions of Node.js. Your node.js and npm installed successfully:)!!.
+
+
+By typing below command you will be able to see location of your installed packages :-
+
+To see node package loacation type below command :-
+
+	which node
+	
+To see npm package loacation type below command :-	
+
+	which npm
+	
+Now run the server JS file in node JS and check if the application is running or not.
+
+To run server.js file need to go to that directory of file or you need to give absolute path(full path). here we will go into that folder by below command :-
+
+	cd Version-control (your directory name)
+	
+list all files and directories by below command :-
+
+	ls
+	
+Now run server.js file by typing below command :-
+
+	node server.js
+	
+Now you done with your task:)!!
+
